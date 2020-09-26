@@ -71,7 +71,7 @@ RUN curl -L https://github.com/tesseract-ocr/tessdata${TESSERACT_DATA_SUFFIX}/ra
 
 # copy directory to outside
 COPY . ${DIST}/tesseract/share/tessdata/
-# delete unsed file from outside, keep package.sh (later will use)
+# delete unsed file from outside, keep package.sh and tessconfigs directory (later will use)
 RUN rm Dockerfile*
 RUN rm READM*
 RUN rm build_*
